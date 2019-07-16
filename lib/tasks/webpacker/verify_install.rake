@@ -8,6 +8,8 @@ namespace :webpacker do
            "Make sure webpacker:install is run successfully before " \
            "running dependent tasks"
       exit!
+    else
+      $stderr.puts "config_path found."
     end
   end
 end

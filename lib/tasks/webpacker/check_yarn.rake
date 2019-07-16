@@ -2,6 +2,7 @@ namespace :webpacker do
   desc "Verifies if Yarn is installed"
   task :check_yarn do
     begin
+      $stderr.puts "In check_yarn method"
       yarn_version = `yarn --version`
       raise Errno::ENOENT if yarn_version.blank?
 
